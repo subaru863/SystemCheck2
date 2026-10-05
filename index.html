@@ -1,0 +1,286 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SystemCheck</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="topbar">
+        <div class="logo">System<span>Check</span></div>
+
+        <div id="platformStatus" class="platform-status">
+            Detecting device...
+        </div>
+    </header>
+
+
+    <main>
+
+        <section class="hero">
+
+            <p class="eyebrow">
+                SYSTEM DIAGNOSTICS
+            </p>
+
+            <h1>
+                Know what's inside<br>your device.
+            </h1>
+
+            <p class="subtitle">
+                Scan your device and view its available hardware information.
+            </p>
+
+            <button id="scanButton" class="scan-button">
+                CHECK YOUR SYSTEM
+            </button>
+
+            <p id="scanStatus" class="scan-status"></p>
+
+        </section>
+
+
+        <section id="results" class="results hidden">
+
+            <div class="device-header">
+
+                <div>
+                    <p class="section-label">
+                        DEVICE DETECTED
+                    </p>
+
+                    <h2 id="deviceType">
+                        Unknown Device
+                    </h2>
+                </div>
+
+                <div id="powerLevel" class="power-level">
+                    --
+                </div>
+
+            </div>
+
+
+            <div class="spec-grid">
+
+                <!-- CPU -->
+                <div class="spec-card">
+
+                    <div class="card-title">
+                        CPU
+                    </div>
+
+                    <div id="cpuName" class="card-value">
+                        Unavailable
+                    </div>
+
+                    <div class="card-detail">
+                        Cores:
+                        <span id="cpuCores">--</span>
+                    </div>
+
+                    <div class="card-detail">
+                        Threads:
+                        <span id="cpuThreads">--</span>
+                    </div>
+
+                </div>
+
+
+                <!-- RAM -->
+                <div class="spec-card">
+
+                    <div class="card-title">
+                        MEMORY
+                    </div>
+
+                    <div id="ramValue" class="card-value">
+                        Unavailable
+                    </div>
+
+                    <div class="card-detail">
+                        RAM
+                    </div>
+
+                </div>
+
+
+                <!-- GPU -->
+                <div class="spec-card">
+
+                    <div class="card-title">
+                        GPU
+                    </div>
+
+                    <div id="gpuName" class="card-value">
+                        Unavailable
+                    </div>
+
+                    <div class="card-detail">
+                        VRAM:
+                        <span id="gpuVram">--</span>
+                    </div>
+
+                    <div class="card-detail">
+                        Driver:
+                        <span id="gpuDriver">--</span>
+                    </div>
+
+                </div>
+
+
+                <!-- STORAGE -->
+                <div class="spec-card">
+
+                    <div class="card-title">
+                        STORAGE
+                    </div>
+
+                    <div id="storageValue" class="card-value">
+                        Unavailable
+                    </div>
+
+                    <div class="card-detail">
+                        Storage devices
+                    </div>
+
+                </div>
+
+
+                <!-- DISPLAY -->
+                <div class="spec-card">
+
+                    <div class="card-title">
+                        DISPLAY
+                    </div>
+
+                    <div id="displayValue" class="card-value">
+                        Unavailable
+                    </div>
+
+                    <div class="card-detail">
+                        Browser resolution:
+                        <span id="browserResolution">--</span>
+                    </div>
+
+                </div>
+
+
+                <!-- OS -->
+                <div class="spec-card">
+
+                    <div class="card-title">
+                        OPERATING SYSTEM
+                    </div>
+
+                    <div id="osValue" class="card-value">
+                        Unavailable
+                    </div>
+
+                    <div class="card-detail">
+                        Version:
+                        <span id="osVersion">--</span>
+                    </div>
+
+                </div>
+
+
+                <!-- BATTERY -->
+                <div class="spec-card">
+
+                    <div class="card-title">
+                        BATTERY
+                    </div>
+
+                    <div id="batteryValue" class="card-value">
+                        Unavailable
+                    </div>
+
+                    <div class="card-detail">
+                        Status:
+                        <span id="batteryStatus">--</span>
+                    </div>
+
+                </div>
+
+
+                <!-- DEVICE INFO -->
+                <div class="spec-card">
+
+                    <div class="card-title">
+                        DEVICE INFO
+                    </div>
+
+                    <div id="manufacturerValue" class="card-value">
+                        Unavailable
+                    </div>
+
+                    <div class="card-detail">
+                        Model:
+                        <span id="modelValue">--</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- BROWSER INFORMATION -->
+            <div class="browser-section">
+
+                <p class="section-label">
+                    BROWSER INFORMATION
+                </p>
+
+                <div class="browser-grid">
+
+                    <div>
+                        <span>Platform</span>
+                        <strong id="browserPlatform">--</strong>
+                    </div>
+
+                    <div>
+                        <span>CPU Threads</span>
+                        <strong id="browserThreads">--</strong>
+                    </div>
+
+                    <div>
+                        <span>Device Memory</span>
+                        <strong id="browserMemory">--</strong>
+                    </div>
+
+                    <div>
+                        <span>Screen</span>
+                        <strong id="screenSize">--</strong>
+                    </div>
+
+                    <div>
+                        <span>Pixel Ratio</span>
+                        <strong id="pixelRatio">--</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        SystemCheck · Device diagnostics
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+```

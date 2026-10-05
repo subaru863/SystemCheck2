@@ -1,0 +1,357 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --bg: #08090b;
+    --panel: #101216;
+    --panel2: #15181d;
+    --border: #242830;
+    --text: #f4f5f7;
+    --muted: #8d939d;
+    --accent: #ffffff;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+}
+
+
+.topbar {
+    width: 100%;
+    height: 72px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 6%;
+
+    border-bottom: 1px solid var(--border);
+}
+
+
+.logo {
+    font-size: 23px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+.logo span {
+    font-weight: 400;
+}
+
+
+.platform-status {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+
+main {
+    width: min(1150px, 90%);
+    margin: auto;
+}
+
+
+.hero {
+    min-height: 470px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+}
+
+
+.eyebrow,
+.section-label {
+    color: var(--muted);
+    font-size: 11px;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+
+.hero h1 {
+    font-size: clamp(42px, 7vw, 78px);
+    line-height: 0.98;
+    margin-top: 18px;
+    letter-spacing: -3px;
+}
+
+
+.subtitle {
+    margin-top: 24px;
+    color: var(--muted);
+    max-width: 550px;
+    line-height: 1.6;
+}
+
+
+.scan-button {
+    margin-top: 35px;
+
+    border: none;
+    background: white;
+    color: black;
+
+    padding: 16px 30px;
+
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+
+.scan-button:hover {
+    transform: translateY(-2px);
+}
+
+
+.scan-button:active {
+    transform: translateY(0);
+}
+
+
+.scan-button:disabled {
+    opacity: 0.5;
+    cursor: wait;
+}
+
+
+.scan-status {
+    margin-top: 16px;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+
+.hidden {
+    display: none;
+}
+
+
+.results {
+    padding-bottom: 80px;
+}
+
+
+.device-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 25px 0;
+
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+
+    margin-bottom: 20px;
+}
+
+
+.device-header h2 {
+    margin-top: 8px;
+    font-size: 30px;
+}
+
+
+.power-level {
+    font-size: 22px;
+    font-weight: 800;
+}
+
+
+.spec-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 14px;
+}
+
+
+.spec-card {
+    background: var(--panel);
+
+    border: 1px solid var(--border);
+
+    padding: 25px;
+
+    min-height: 160px;
+}
+
+
+.card-title {
+    color: var(--muted);
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+
+    margin-bottom: 16px;
+}
+
+
+.card-value {
+    font-size: 21px;
+    font-weight: 700;
+
+    overflow-wrap: anywhere;
+}
+
+
+.card-detail {
+    margin-top: 12px;
+
+    color: var(--muted);
+
+    font-size: 13px;
+}
+
+
+.card-detail span {
+    color: var(--text);
+}
+
+
+.browser-section {
+    margin-top: 40px;
+
+    background: var(--panel);
+
+    border: 1px solid var(--border);
+
+    padding: 25px;
+}
+
+
+.browser-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 20px;
+
+    margin-top: 25px;
+}
+
+
+.browser-grid div {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+
+.browser-grid span {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+
+.browser-grid strong {
+    font-size: 15px;
+    overflow-wrap: anywhere;
+}
+
+
+footer {
+    border-top: 1px solid var(--border);
+
+    padding: 25px;
+
+    text-align: center;
+
+    color: var(--muted);
+
+    font-size: 12px;
+}
+
+
+@media (max-width: 700px) {
+
+    .topbar {
+        height: 64px;
+        padding: 0 5%;
+    }
+
+
+    .logo {
+        font-size: 20px;
+    }
+
+
+    .platform-status {
+        font-size: 11px;
+    }
+
+
+    main {
+        width: 92%;
+    }
+
+
+    .hero {
+        min-height: 430px;
+    }
+
+
+    .hero h1 {
+        font-size: 47px;
+        letter-spacing: -2px;
+    }
+
+
+    .subtitle {
+        font-size: 14px;
+    }
+
+
+    .spec-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .browser-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+    .device-header h2 {
+        font-size: 24px;
+    }
+
+}
+
+
+@media (max-width: 420px) {
+
+    .platform-status {
+        display: none;
+    }
+
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+
+    .browser-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
